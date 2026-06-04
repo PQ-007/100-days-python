@@ -1,0 +1,1 @@
+words = ["ardvark", "baboon", "camel", "dolphin", "elephant", "flamingo", "giraffe", "hippopotamus", "iguana", "jaguar", "kangaroo", "lemur", "monkey", "narwhal", "octopus", "penguin", "quokka", "rabbit", "snake", "tiger", "unicorn", "vulture", "walrus", "xerus", "yak", "zebra"]
