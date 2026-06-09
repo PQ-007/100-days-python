@@ -10,6 +10,12 @@ def evaluate_guess(guess, account_a, account_b):
     else:
         account_a = account_b
         return guess == 'B'
+def format_account(account):
+    """Format the account data into a printable string."""
+    name = account['name']
+    description = account['description']
+    country = account['country']
+    return f"{name}, a {description}, from {country}"
 
 def play_game():
     score = 0
@@ -24,9 +30,9 @@ def play_game():
             break
         account_b = choice(data)
         data.remove(account_b)
-        print(f"Compare A: {account_a['name']}, a {account_a['description']}, from {account_a['country']}.")
+        print(f"Compare A: {format_account(account_a)}")
         print(vs)
-        print(f"Against B: {account_b['name']}, a {account_b['description']}, from {account_b['country']}.")
+        print(f"Against B: {format_account(account_b)}")
         guess = input("Who has more followers? Type 'A' or 'B': ").upper()
         is_correct = evaluate_guess(guess, account_a, account_b)
         if is_correct:
